@@ -94,7 +94,44 @@ namespace Exercise2
                 L[i] = farhan[l + i];
             for (FI = 0; FI < n2; i++)
                 R[FI] = farhan[m + i + FI];
+
+            // merge the temp arrays
+            i=0;
+            FI = 0;
+
+            int k = l;
+            while (i < n1 && FI < n2)
+            {
+                if (L[i] <= R[FI])
+                {
+                    farhan[k] = L[i];
+                    i++;
+                }
+                else
+                {
+                    farhan[k] = R[FI];
+                    FI++;
+                }
+                k++;
+            }
+
+            //Copy remaining elements
+            while (i < n1)
+            {
+                farhan[k] = L[i];
+                i++;
+                k++;
+            }
+
+            while (FI < n2)
+            {
+                farhan[k] = R[FI];
+                FI++;
+                k++;
+            }
         }
+
+        
         static void Main(string[] args)
         {
         }
