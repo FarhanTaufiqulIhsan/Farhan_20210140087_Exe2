@@ -14,6 +14,9 @@ namespace Exercise2
         private int n;
         // Get the number of elements to store in the array
         private int i;
+        int m;
+        int r;
+        int l;
 
         public void input()
         {
@@ -72,6 +75,19 @@ namespace Exercise2
             for (i = 0; i < n; i++)
                 Console.Write(farhan[i] + "");
             Console.Write("\n");
+        }
+
+        public void mergesort()
+        {
+            // find sizes of two
+            // subarrays to be merged
+            int n1 = m - l + 1;
+            int n2 = r - m;
+
+            // create temp arrays
+            int[] L = new int[n1];
+            int[] R = new int[n2];
+            int i, FI;            
         }
         static void Main(string[] args)
         {
