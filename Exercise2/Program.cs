@@ -43,8 +43,26 @@ namespace Exercise2
                 Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
                 farhan[i] = Int32.Parse(s1);
+            }   
+        }
+        public void InsertionSort()
+        {
+            for (i = 1; i < n; i++)
+            {
+                // Move elements of array [0...i-1],
+                // thar are greater than temp,
+                // to one position ahead of,
+                // their current position.
+                int temp = farhan[i];
+                int FI = i - 1;
+
+                while (FI >= 0 && farhan[FI] > temp)
+                {
+                    farhan[FI + 1] = farhan[FI];
+                    FI = FI - 1;
+                }
+                farhan[FI + 1] = temp;
             }
-            
         }
         static void Main(string[] args)
         {
