@@ -9,11 +9,11 @@ namespace Exercise2
     class Program
     {
         // Array to be searched
-        private Int64[] farhan = new Int64[35];
+        private int[] farhan = new int[35];
         // Number of the elements in the array
-        private Int64 n;
+        private int n;
         // Get the number of elements to store in the array
-        private Int64 i;
+        private int i;
 
         public void input()
         {
@@ -23,7 +23,7 @@ namespace Exercise2
                 // message for user to enter the array
                 Console.WriteLine("Enter the number of the element in the array: ");
                 string s = Console.ReadLine();
-                n = Int64.Parse(s);
+                n = Int32.Parse(s);
 
                 // add maximum and minimum array that can be assign in this system
                 if ((n > 0) && (n <= 35))
@@ -32,6 +32,17 @@ namespace Exercise2
                     // add message if the user try to input the array above the limits
                     Console.WriteLine("\nArray should have minimum 1 and maximum 35 elements. \n");
 
+            }
+            // Accept array elements
+            Console.WriteLine("");
+            Console.WriteLine("----------------------");
+            Console.WriteLine(" Enter array elements ");
+            Console.WriteLine("----------------------");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                farhan[i] = Int32.Parse(s1);
             }
             
         }
