@@ -150,6 +150,7 @@ namespace Exercise2
             {
                 do
                 {
+
                     Console.WriteLine("Menu Option");
                     Console.WriteLine("===========");
                     Console.WriteLine("1. insertion sort");
@@ -162,7 +163,7 @@ namespace Exercise2
                         case 1:
                             Console.WriteLine("");
                             Console.WriteLine("................");
-                            Console.WriteLine("Linear search");
+                            Console.WriteLine("insertion sort");
                             Console.WriteLine("................");
                             mylist.input();
                             mylist.InsertionSort();
@@ -171,7 +172,7 @@ namespace Exercise2
                         case 2:
                             Console.WriteLine("");
                             Console.WriteLine("................");
-                            Console.WriteLine("Binary Search");
+                            Console.WriteLine("merge sort");
                             Console.WriteLine("................");
                             mylist.input();
                             mylist.mergesort();
