@@ -77,7 +77,7 @@ namespace Exercise2
             Console.Write("\n");
         }
 
-        public void mergesort()
+        void mergesort()
         {
             // find sizes of two
             // subarrays to be merged
@@ -115,7 +115,7 @@ namespace Exercise2
                 k++;
             }
 
-            //Copy remaining elements
+            //Copy remaining elements of L[] if any
             while (i < n1)
             {
                 farhan[k] = L[i];
@@ -123,6 +123,7 @@ namespace Exercise2
                 k++;
             }
 
+            //Copy remaining elements of R[] if any
             while (FI < n2)
             {
                 farhan[k] = R[FI];
@@ -130,10 +131,69 @@ namespace Exercise2
                 k++;
             }
         }
+        public void displaymergesort()
+        {
+            // function to display the array of size n
+            n = farhan.Length;
+            for (i = 0; i < n; i++)
+                Console.Write(farhan[i] + "");
+            Console.Write("\n");
+        }
 
-        
+
         static void Main(string[] args)
         {
+            Program mylist = new Program();
+            int pilihanmenu;
+            char ch;
+            do
+            {
+                do
+                {
+                    Console.WriteLine("Menu Option");
+                    Console.WriteLine("===========");
+                    Console.WriteLine("1. insertion sort");
+                    Console.WriteLine("2. merge sort");
+                    Console.WriteLine("3. Exit");
+                    Console.WriteLine("Enter your choice (1,2,3) :");
+                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("................");
+                            Console.WriteLine("Linear search");
+                            Console.WriteLine("................");
+                            mylist.input();
+                            mylist.InsertionSort();
+                            mylist.displayinsertionsort();
+                            break;
+                        case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine("................");
+                            Console.WriteLine("Binary Search");
+                            Console.WriteLine("................");
+                            mylist.input();
+                            mylist.mergesort();
+                            mylist.displaymergesort();
+                            break;
+                        case 3:
+                            Console.WriteLine("exit");
+                            break;
+                        default:
+                            Console.WriteLine("Error");
+                            break;
+
+                    }
+                    Console.WriteLine("\nPilih Menu lagi? (y/n) ");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+
+                // to exit from the console
+                Console.WriteLine("\n\nPress Return to exit. ");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
     }
 }
