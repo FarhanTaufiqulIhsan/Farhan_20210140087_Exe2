@@ -64,6 +64,15 @@ namespace Exercise2
                 farhan[FI + 1] = temp;
             }
         }
+
+        public void displayinsertionsort()
+        {
+            // function to display the array of size n
+            n = farhan.Length;
+            for (i = 0; i < n; i++)
+                Console.Write(farhan[i] + "");
+            Console.Write("\n");
+        }
         static void Main(string[] args)
         {
         }
