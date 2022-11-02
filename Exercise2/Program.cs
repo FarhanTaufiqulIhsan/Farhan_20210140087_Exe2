@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Exercise2
 {
-    internal class Program
+    class Program
     {
+        private int[] farhan = new int[35];
+        private int n;
+        private int i;
+
         static void Main(string[] args)
         {
         }
