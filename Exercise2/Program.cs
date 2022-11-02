@@ -87,7 +87,13 @@ namespace Exercise2
             // create temp arrays
             int[] L = new int[n1];
             int[] R = new int[n2];
-            int i, FI;            
+            int i, FI;
+
+            // copy data to temp arrays
+            for (i = 0; i < n1; i++)
+                L[i] = farhan[l + i];
+            for (FI = 0; FI < n2; i++)
+                R[FI] = farhan[m + i + FI];
         }
         static void Main(string[] args)
         {
